@@ -75,6 +75,7 @@ private:
 	int _AIActionCounter;
 	BattleAction _currentAction;
 	bool _AISecondMove, _playedAggroSound;
+	bool _playerAIEnabled;
 	bool _endTurnRequested, _endTurnProcessed;
 
 	/// Ends the turn.
@@ -88,6 +89,8 @@ private:
 	std::vector<InfoboxOKState*> _infoboxQueue;
 	/// Shows the infoboxes in the queue (if any).
 	void showInfoBoxQueue();
+	/// Selects the next unit after an AI-controlled action.
+	void advanceAIUnit(BattleUnit *unit);
 public:
 	/// is debug mode enabled in the battlescape?
 	static bool _debugPlay;
@@ -164,6 +167,12 @@ public:
 	Mod *getMod();
 	/// Returns whether panic has been handled.
 	bool getPanicHandled() const { return _playerPanicHandled; }
+	/// Sets whether player units are AI-controlled on the player turn.
+	void setPlayerAIEnabled(bool enabled);
+	/// Gets whether player units are AI-controlled on the player turn.
+	bool getPlayerAIEnabled() const;
+	/// Returns whether the current side is under AI control.
+	bool isAIControlledTurn() const;
 	/// Tries to find an item and pick it up if possible.
 	void findItem(BattleAction *action);
 	/// Checks through all the items on the ground and picks one.

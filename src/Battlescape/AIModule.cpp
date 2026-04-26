@@ -60,7 +60,7 @@ AIModule::AIModule(SavedBattleGame *save, BattleUnit *unit, Node *node) : _save(
 	_patrolAction = new BattleAction();
 	_psiAction = new BattleAction();
 	_targetFaction = FACTION_PLAYER;
-	if (_unit->getOriginalFaction() == FACTION_NEUTRAL)
+	if (_unit->getOriginalFaction() == FACTION_NEUTRAL || _unit->getOriginalFaction() == FACTION_PLAYER)
 	{
 		_targetFaction = FACTION_HOSTILE;
 	}
@@ -988,11 +988,11 @@ int AIModule::countKnownTargets() const
 {
 	int knownEnemies = 0;
 
-	if (_unit->getFaction() == FACTION_HOSTILE)
+	if (_unit->getFaction() == FACTION_HOSTILE || _unit->getFaction() == FACTION_PLAYER)
 	{
 		for (std::vector<BattleUnit*>::const_iterator i = _save->getUnits()->begin(); i != _save->getUnits()->end(); ++i)
 		{
-			if (validTarget(*i, true, true))
+			if (validTarget(*i, true, _unit->getFaction() == FACTION_HOSTILE))
 			{
 				++knownEnemies;
 			}

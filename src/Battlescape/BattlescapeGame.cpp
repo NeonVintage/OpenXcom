@@ -68,7 +68,7 @@ bool BattlescapeGame::_debugPlay = false;
  * @param save Pointer to the save game.
  * @param parentState Pointer to the parent battlescape state.
  */
-BattlescapeGame::BattlescapeGame(SavedBattleGame *save, BattlescapeState *parentState) : _save(save), _parentState(parentState), _playerPanicHandled(true), _AIActionCounter(0), _AISecondMove(false), _playedAggroSound(false), _endTurnRequested(false), _endTurnProcessed(false)
+BattlescapeGame::BattlescapeGame(SavedBattleGame *save, BattlescapeState *parentState) : _save(save), _parentState(parentState), _playerPanicHandled(true), _AIActionCounter(0), _AISecondMove(false), _playedAggroSound(false), _playerAIEnabled(false), _endTurnRequested(false), _endTurnProcessed(false)
 {
 
 	_currentAction.actor = 0;
@@ -145,8 +145,57 @@ void BattlescapeGame::think()
 				_playerPanicHandled = handlePanickingPlayer();
 				_save->getBattleState()->updateSoldierInfo();
 			}
+			else if (_playerAIEnabled)
+			{
+				_save->resetUnitHitStates();
+				if (_save->getSelectedUnit())
+				{
+					if (!handlePanickingUnit(_save->getSelectedUnit()))
+						handleAI(_save->getSelectedUnit());
+				}
+				else
+				{
+					if (_save->selectNextPlayerUnit(true, _AISecondMove) == 0)
+					{
+						_endTurnRequested = true;
+						statePushBack(0); // end AI turn
+					}
+				}
+			}
 		}
 	}
+}
+
+/**
+ * Sets whether player units are AI-controlled on the player turn.
+ * @param enabled True to let the AI control player units.
+ */
+void BattlescapeGame::setPlayerAIEnabled(bool enabled)
+{
+	if (_playerAIEnabled != enabled)
+	{
+		_AIActionCounter = 0;
+		_AISecondMove = false;
+	}
+	_playerAIEnabled = enabled;
+}
+
+/**
+ * Gets whether player units are AI-controlled on the player turn.
+ * @return True when player AI is enabled.
+ */
+bool BattlescapeGame::getPlayerAIEnabled() const
+{
+	return _playerAIEnabled;
+}
+
+/**
+ * Returns whether the current side is under AI control.
+ * @return True if the current side should use the AI turn flow.
+ */
+bool BattlescapeGame::isAIControlledTurn() const
+{
+	return (_save->getSide() != FACTION_PLAYER && !_debugPlay) || (_save->getSide() == FACTION_PLAYER && _playerAIEnabled);
 }
 
 /**
@@ -175,33 +224,14 @@ void BattlescapeGame::handleAI(BattleUnit *unit)
 	}
 	if (_AIActionCounter >= 2 || !unit->reselectAllowed())
 	{
-		if (_save->selectNextPlayerUnit(true, _AISecondMove) == 0)
-		{
-			if (!_save->getDebugMode())
-			{
-				_endTurnRequested = true;
-				statePushBack(0); // end AI turn
-			}
-			else
-			{
-				_save->selectNextPlayerUnit();
-				_debugPlay = true;
-			}
-		}
-		if (_save->getSelectedUnit())
-		{
-			_parentState->updateSoldierInfo();
-			getMap()->getCamera()->centerOnPosition(_save->getSelectedUnit()->getPosition());
-			if (_save->getSelectedUnit()->getId() <= unit->getId())
-			{
-				_AISecondMove = true;
-			}
-		}
-		_AIActionCounter = 0;
+		advanceAIUnit(unit);
 		return;
 	}
 
-	unit->setVisible(false);
+	if (_save->getSide() != FACTION_PLAYER)
+	{
+		unit->setVisible(false);
+	}
 
 	_save->getTileEngine()->calculateFOV(unit->getPosition()); // might need this populate _visibleUnit for a newly-created alien
 		// it might also help chryssalids realize they've zombified someone and need to move on
@@ -295,28 +325,37 @@ void BattlescapeGame::handleAI(BattleUnit *unit)
 	if (action.type == BA_NONE)
 	{
 		_parentState->debug("Idle");
-		_AIActionCounter = 0;
-		if (_save->selectNextPlayerUnit(true, _AISecondMove) == 0)
+		advanceAIUnit(unit);
+	}
+}
+
+/**
+ * Selects the next unit after an AI-controlled action.
+ * @param unit Pointer to the unit that just acted.
+ */
+void BattlescapeGame::advanceAIUnit(BattleUnit *unit)
+{
+	_AIActionCounter = 0;
+	if (_save->selectNextPlayerUnit(true, _AISecondMove) == 0)
+	{
+		if (!_save->getDebugMode())
 		{
-			if (!_save->getDebugMode())
-			{
-				_endTurnRequested = true;
-				statePushBack(0); // end AI turn
-			}
-			else
-			{
-				_save->selectNextPlayerUnit();
-				_debugPlay = true;
-			}
+			_endTurnRequested = true;
+			statePushBack(0); // end AI turn
 		}
-		if (_save->getSelectedUnit())
+		else
 		{
-			_parentState->updateSoldierInfo();
-			getMap()->getCamera()->centerOnPosition(_save->getSelectedUnit()->getPosition());
-			if (_save->getSelectedUnit()->getId() <= unit->getId())
-			{
-				_AISecondMove = true;
-			}
+			_save->selectNextPlayerUnit();
+			_debugPlay = true;
+		}
+	}
+	if (_save->getSelectedUnit())
+	{
+		_parentState->updateSoldierInfo();
+		getMap()->getCamera()->centerOnPosition(_save->getSelectedUnit()->getPosition());
+		if (_save->getSelectedUnit()->getId() <= unit->getId())
+		{
+			_AISecondMove = true;
 		}
 	}
 }
@@ -1020,15 +1059,20 @@ void BattlescapeGame::popState()
 	// handle the end of this unit's actions
 	if (action.actor && noActionsPending(action.actor))
 	{
+		const bool actorIsAISide = isAIControlledTurn() && action.actor->getFaction() == _save->getSide();
 		if (action.actor->getFaction() == FACTION_PLAYER)
 		{
 			// spend TUs of "target triggered actions" (shooting, throwing) only
 			// the other actions' TUs (healing,scanning,..) are already take care of
-			if (action.targeting && _save->getSelectedUnit() && !actionFailed)
+			if (actorIsAISide && !actionFailed)
 			{
 				action.actor->spendTimeUnits(action.TU);
 			}
-			if (_save->getSide() == FACTION_PLAYER)
+			else if (action.targeting && _save->getSelectedUnit() && !actionFailed)
+			{
+				action.actor->spendTimeUnits(action.TU);
+			}
+			if (_save->getSide() == FACTION_PLAYER && !actorIsAISide)
 			{
 				// after throwing the cursor returns to default cursor, after shooting it stays in targeting mode and the player can shoot again in the same mode (autoshot,snap,aimed)
 				if ((action.type == BA_THROW || action.type == BA_LAUNCH) && !actionFailed)
@@ -1044,12 +1088,7 @@ void BattlescapeGame::popState()
 				_parentState->getGame()->getCursor()->setVisible(true);
 				setupCursor();
 			}
-		}
-		else
-		{
-			// spend TUs
-			action.actor->spendTimeUnits(action.TU);
-			if (_save->getSide() != FACTION_PLAYER && !_debugPlay)
+			else if (actorIsAISide)
 			{
 				// AI does three things per unit, before switching to the next, or it got killed before doing the second thing
 				if (_AIActionCounter > 2 || _save->getSelectedUnit() == 0 || _save->getSelectedUnit()->isOut())
@@ -1059,19 +1098,27 @@ void BattlescapeGame::popState()
 						_save->getSelectedUnit()->setCache(0);
 						getMap()->cacheUnit(_save->getSelectedUnit());
 					}
-					_AIActionCounter = 0;
-					if (_states.empty() && _save->selectNextPlayerUnit(true) == 0)
+					advanceAIUnit(action.actor);
+				}
+			}
+		}
+		else
+		{
+			// spend TUs
+			action.actor->spendTimeUnits(action.TU);
+			if (actorIsAISide)
+			{
+				// AI does three things per unit, before switching to the next, or it got killed before doing the second thing
+				if (_AIActionCounter > 2 || _save->getSelectedUnit() == 0 || _save->getSelectedUnit()->isOut())
+				{
+					if (_save->getSelectedUnit())
 					{
-						if (!_save->getDebugMode())
-						{
-							_endTurnRequested = true;
-							statePushBack(0); // end AI turn
-						}
-						else
-						{
-							_save->selectNextPlayerUnit();
-							_debugPlay = true;
-						}
+						_save->getSelectedUnit()->setCache(0);
+						getMap()->cacheUnit(_save->getSelectedUnit());
+					}
+					if (_states.empty())
+					{
+						advanceAIUnit(action.actor);
 					}
 					if (_save->getSelectedUnit())
 					{
@@ -1171,7 +1218,7 @@ bool BattlescapeGame::checkReservedTU(BattleUnit *bu, int tu, bool justChecking)
 		return tu <= bu->getTimeUnits();
 	}
 
-	if (_save->getSide() == FACTION_HOSTILE && !_debugPlay) // aliens reserve TUs as a percentage rather than just enough for a single action.
+	if (isAIControlledTurn() && _save->getSide() != FACTION_NEUTRAL) // AI reserves TUs as a percentage rather than just enough for a single action.
 	{
 		AIModule *ai = bu->getAIModule();
 		if (ai)

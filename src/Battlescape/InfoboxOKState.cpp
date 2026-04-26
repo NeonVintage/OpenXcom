@@ -17,6 +17,7 @@
  * along with OpenXcom.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "InfoboxOKState.h"
+#include "BattlescapeGame.h"
 #include "../Engine/Game.h"
 #include "../Engine/LocalizedText.h"
 #include "../Interface/TextButton.h"
@@ -79,6 +80,18 @@ InfoboxOKState::InfoboxOKState(const std::string &msg)
 InfoboxOKState::~InfoboxOKState()
 {
 
+}
+
+/**
+ * Auto-confirms this popup while player AI is active.
+ */
+void InfoboxOKState::think()
+{
+	SavedBattleGame *battle = _game->getSavedGame()->getSavedBattle();
+	if (battle && battle->getBattleGame() && battle->getBattleGame()->getPlayerAIEnabled())
+	{
+		btnOkClick(0);
+	}
 }
 
 /**

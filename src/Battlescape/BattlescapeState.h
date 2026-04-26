@@ -30,6 +30,7 @@ class Surface;
 class Map;
 class ImageButton;
 class BattlescapeButton;
+class TextButton;
 class InteractiveSurface;
 class Text;
 class Bar;
@@ -53,6 +54,7 @@ private:
 	BattlescapeButton *_btnUnitUp, *_btnUnitDown, *_btnMapUp, *_btnMapDown, *_btnShowMap, *_btnKneel;
 	BattlescapeButton *_btnInventory, *_btnCenter, *_btnNextSoldier, *_btnNextStop, *_btnShowLayers, *_btnHelp;
 	BattlescapeButton *_btnEndTurn, *_btnAbort, *_btnLaunch, *_btnPsi, *_reserve;
+	TextButton *_btnPlayerAI;
 	InteractiveSurface *_btnStats;
 	BattlescapeButton *_btnReserveNone, *_btnReserveSnap, *_btnReserveAimed, *_btnReserveAuto, *_btnReserveKneel, *_btnZeroTUs;
 	InteractiveSurface *_btnLeftHandItem, *_btnRightHandItem;
@@ -95,6 +97,8 @@ private:
 	BattleItem *getRightHandItem(BattleUnit *unit);
 	/// Gets the built-in melee weapon of a unit, if any.
 	BattleItem *getSpecialMeleeWeapon(BattleUnit *unit);
+	/// Updates the player AI toggle button state.
+	void updatePlayerAIButton();
 public:
 	/// Selects the next soldier.
 	void selectNextPlayerUnit(bool checkReselect = false, bool setReselect = false, bool checkInventory = false, bool checkFOV = true);
@@ -159,6 +163,8 @@ public:
 	void btnLaunchClick(Action *action);
 	/// Handler for clicking the use psi button.
 	void btnPsiClick(Action *action);
+	/// Handler for clicking the player AI button.
+	void btnPlayerAIClick(Action *action);
 	/// Handler for clicking a reserved button.
 	void btnReserveClick(Action *action);
 	/// Handler for clicking the reload button.

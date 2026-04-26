@@ -67,6 +67,7 @@ en-US:
   STR_MINIMAP: "Minimap"
   STR_MULTI_LEVEL_VIEW: "Multi-Level View"
   STR_END_TURN: "End Turn"
+  STR_TOGGLE_PLAYER_AI: "Toggle Player AI"
   STR_ABORT_MISSION: "Abort Mission"
   STR_UNIT_STATS: "Unit Stats"
   STR_KNEEL: "Kneel"

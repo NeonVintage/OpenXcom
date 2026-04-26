@@ -30,6 +30,7 @@
 #include "../Engine/Action.h"
 #include "../Savegame/SavedBattleGame.h"
 #include "BattlescapeState.h"
+#include "BattlescapeGame.h"
 #include "Map.h"
 
 namespace OpenXcom
@@ -122,7 +123,7 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 
 	_state->clearMouseScrollingState();
 
-	if (Options::skipNextTurnScreen)
+	if (Options::skipNextTurnScreen || _state->getBattleGame()->getPlayerAIEnabled())
 	{
 		_timer = new Timer(NEXT_TURN_DELAY);
 		_timer->onTimer((StateHandler)&NextTurnState::close);
@@ -157,6 +158,11 @@ void NextTurnState::handle(Action *action)
  */
 void NextTurnState::think()
 {
+	if (_state->getBattleGame()->getPlayerAIEnabled() && !_timer)
+	{
+		close();
+		return;
+	}
 	if (_timer)
 	{
 		_timer->think(this, 0);

@@ -41,6 +41,8 @@ public:
 	InfoboxOKState(const std::string &msg);
 	/// Cleans up the InfoboxOKState.
 	~InfoboxOKState();
+	/// Handles auto-confirming while player AI is active.
+	void think();
 	/// Handler for clicking the OK button.
 	void btnOkClick(Action *action);
 };

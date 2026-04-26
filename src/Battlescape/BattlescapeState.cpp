@@ -51,6 +51,7 @@
 #include "../Engine/CrossPlatform.h"
 #include "../Interface/Cursor.h"
 #include "../Interface/Text.h"
+#include "../Interface/TextButton.h"
 #include "../Interface/Bar.h"
 #include "../Interface/BattlescapeButton.h"
 #include "../Interface/NumberText.h"
@@ -140,6 +141,7 @@ BattlescapeState::BattlescapeState() : _reserve(0), _firstInit(true), _isMouseSc
 	_btnLaunch->setVisible(false);
 	_btnPsi = new BattlescapeButton(32, 24, screenWidth - 32, 25); // we need screenWidth, because that is independent of the black bars on the screen
 	_btnPsi->setVisible(false);
+	_btnPlayerAI = new TextButton(64, 16, x + 224, y - 16); // visible battlescape toggle, just above the end-turn controls
 
 	// Create soldier stats summary
 	_txtName = new Text(136, 10, x + 135, y + 32);
@@ -247,6 +249,11 @@ BattlescapeState::BattlescapeState() : _reserve(0), _firstInit(true), _isMouseSc
 	_game->getMod()->getSurfaceSet("SPICONS.DAT")->getFrame(0)->blit(_btnLaunch);
 	add(_btnPsi);
 	_game->getMod()->getSurfaceSet("SPICONS.DAT")->getFrame(1)->blit(_btnPsi);
+	add(_btnPlayerAI);
+	_btnPlayerAI->setColor(Palette::blockOffset(1));
+	_btnPlayerAI->setTextColor(Palette::blockOffset(1)-1);
+	_btnPlayerAI->setHighContrast(true);
+	_btnPlayerAI->setText("AI AUTO");
 
 	// Set up objects
 	_save = _game->getSavedGame()->getSavedBattle();
@@ -405,6 +412,11 @@ BattlescapeState::BattlescapeState() : _reserve(0), _firstInit(true), _isMouseSc
 	_btnZeroTUs->onMouseOut((ActionHandler)&BattlescapeState::txtTooltipOut);
 	_btnZeroTUs->allowClickInversion();
 
+	_btnPlayerAI->onMouseClick((ActionHandler)&BattlescapeState::btnPlayerAIClick);
+	_btnPlayerAI->setTooltip("STR_TOGGLE_PLAYER_AI");
+	_btnPlayerAI->onMouseIn((ActionHandler)&BattlescapeState::txtTooltipIn);
+	_btnPlayerAI->onMouseOut((ActionHandler)&BattlescapeState::txtTooltipOut);
+
 	// shortcuts without a specific button
 	_btnStats->onKeyboardPress((ActionHandler)&BattlescapeState::btnReloadClick, Options::keyBattleReload);
 	_btnStats->onKeyboardPress((ActionHandler)&BattlescapeState::btnPersonalLightingClick, Options::keyBattlePersonalLighting);
@@ -541,6 +553,7 @@ void BattlescapeState::init()
 	_txtTooltip->setText("");
 	_btnReserveKneel->toggle(_save->getKneelReserved());
 	_battleGame->setKneelReserved(_save->getKneelReserved());
+	updatePlayerAIButton();
 	if (_autosave)
 	{
 		_autosave = false;
@@ -1203,6 +1216,42 @@ void BattlescapeState::btnPsiClick(Action *action)
 {
 	_battleGame->psiButtonAction();
 	action->getDetails()->type = SDL_NOEVENT; // consume the event
+}
+
+/**
+ * Toggles player AI control.
+ * @param action Pointer to an action.
+ */
+void BattlescapeState::btnPlayerAIClick(Action *)
+{
+	if (_battleGame->getPlayerAIEnabled())
+	{
+		_battleGame->setPlayerAIEnabled(false);
+		updatePlayerAIButton();
+		_txtTooltip->setText("");
+		if (_save->getSide() == FACTION_PLAYER && !_battleGame->isBusy() && _map->getProjectile() == 0)
+		{
+			updateSoldierInfo();
+			_battleGame->setupCursor();
+		}
+		return;
+	}
+
+	if (_save->getSide() == FACTION_PLAYER
+		&& (_battleGame->getPanicHandled() || _firstInit)
+		&& (!_battleGame->isBusy() || _firstInit)
+		&& _map->getProjectile() == 0)
+	{
+		_battleGame->cancelCurrentAction(true);
+		if (!_save->getSelectedUnit())
+		{
+			_save->selectNextPlayerUnit();
+		}
+		_battleGame->setPlayerAIEnabled(true);
+		updatePlayerAIButton();
+		updateSoldierInfo();
+		_txtTooltip->setText("");
+	}
 }
 
 /**
@@ -2115,6 +2164,23 @@ void BattlescapeState::showPsiButton(bool show)
 }
 
 /**
+ * Updates the player AI toggle button.
+ */
+void BattlescapeState::updatePlayerAIButton()
+{
+	if (_battleGame->getPlayerAIEnabled())
+	{
+		_btnPlayerAI->setText("AI ON");
+		_btnPlayerAI->setColor(Palette::blockOffset(3));
+	}
+	else
+	{
+		_btnPlayerAI->setText("AI AUTO");
+		_btnPlayerAI->setColor(Palette::blockOffset(1));
+	}
+}
+
+/**
  * Clears mouse-scrolling state (isMouseScrolling).
  */
 void BattlescapeState::clearMouseScrollingState()
@@ -2171,6 +2237,7 @@ bool BattlescapeState::allowButtons(bool allowSaving) const
 	return ((allowSaving || _save->getSide() == FACTION_PLAYER || _save->getDebugMode())
 		&& (_battleGame->getPanicHandled() || _firstInit )
 		&& (allowSaving || !_battleGame->isBusy() || _firstInit)
+		&& (allowSaving || !_battleGame->getPlayerAIEnabled())
 		&& (_map->getProjectile() == 0));
 }
 

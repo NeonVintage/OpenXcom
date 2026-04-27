@@ -1,8 +1,0 @@
-The DOSBox Team
----------------
-
-Sjoerd v.d. Berg <harekiet@users.sourceforge.net>
-Peter Veenstra <qbix79@users.sourceforge.net>
-Ulf Wohlers <finsterr@users.sourceforge.net>
-Tommy Frössman <fanskapet@sidvicious.se>
-Dean Beeler <canadacow@users.sourceforge.net>

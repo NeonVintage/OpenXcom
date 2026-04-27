@@ -1251,6 +1251,7 @@ void BattlescapeState::btnPlayerAIClick(Action *)
 		updatePlayerAIButton();
 		updateSoldierInfo();
 		_txtTooltip->setText("");
+		_game->getCursor()->setVisible(true);
 	}
 }
 
@@ -1549,6 +1550,10 @@ void BattlescapeState::animate()
 void BattlescapeState::handleState()
 {
 	_battleGame->handleState();
+	if (_battleGame->getPlayerAIEnabled())
+	{
+		_game->getCursor()->setVisible(true);
+	}
 }
 
 /**
@@ -1607,6 +1612,10 @@ inline void BattlescapeState::handle(Action *action)
 {
 	if (!_firstInit)
 	{
+		if (_battleGame->getPlayerAIEnabled())
+		{
+			_game->getCursor()->setVisible(true);
+		}
 		if (_game->getCursor()->getVisible() || ((action->getDetails()->type == SDL_MOUSEBUTTONDOWN || action->getDetails()->type == SDL_MOUSEBUTTONUP) && action->getDetails()->button.button == SDL_BUTTON_RIGHT))
 		{
 			State::handle(action);

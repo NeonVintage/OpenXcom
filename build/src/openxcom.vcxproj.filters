@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\lodepng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BaseInfoState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BaseView.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BasescapeState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BuildFacilitiesState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftArmorState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftEquipmentState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftInfoState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftSoldiersState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftWeaponsState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftsState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\DismantleFacilityState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManageAlienContainmentState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureInfoState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureStartState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\MiniBaseView.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\MonthlyCostsState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\NewManufactureListState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\NewResearchListState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceFacilityState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceLiftState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceStartFacilityState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PurchaseState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ResearchInfoState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ResearchState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SackSoldierState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SelectStartFacilityState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SellState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierArmorState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryMissionState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryOverviewState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryPerformanceState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierInfoState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierMemorialState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldiersState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\StoresState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferBaseState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferConfirmState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferItemsState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransfersState.cpp">
+      <Filter>Basescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AbortMissionState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ActionMenuItem.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ActionMenuState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AliensCrashState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AIModule.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattleState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeGame.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeGenerator.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeMessage.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BriefingState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Camera.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CannotReequipState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CommendationLateState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CommendationState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\DebriefingState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Explosion.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ExplosionBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InfoboxOKState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InfoboxState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Inventory.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InventoryState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Map.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MedikitState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MedikitView.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MeleeAttackBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MiniMapState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MiniMapView.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\NextTurnState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Particle.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Pathfinding.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PathfindingNode.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PathfindingOpenSet.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PrimeGrenadeState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Projectile.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ProjectileFlyBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PromotionsState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PsiAttackBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ScannerState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ScannerView.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\TileEngine.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitDieBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitFallBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitInfoState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitPanicBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitSprite.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitTurnBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitWalkBState.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\WarningMessage.cpp">
+      <Filter>Battlescape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Action.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Adlib\adlplayer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Adlib\fmopl.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\AdlibMusic.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\CatFile.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\CrossPlatform.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FastLineClip.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FileMap.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FlcPlayer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Font.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\GMCat.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Game.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\InteractiveSurface.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Language.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\LanguagePlurality.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\LocalizedText.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\ModInfo.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Music.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\OpenGL.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\OptionInfo.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Options.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Palette.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\RNG.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq2x.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq3x.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq4x.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\init.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scale2x.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scale3x.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scalebit.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\xbrz.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Screen.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Sound.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\SoundSet.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\State.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Surface.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\SurfaceSet.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Timer.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Unicode.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Zoom.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AlienBaseState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocatePsiTrainingState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDefenseState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDestroyedState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseNameState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BuildNewBaseState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmCydoniaState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmDestinationState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmLandingState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmNewBaseState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\CraftErrorState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\CraftPatrolState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\DogfightErrorState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\DogfightState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\FundingState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GeoscapeCraftState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GeoscapeState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\Globe.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GraphsState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\InterceptState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ItemsArrivingState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\LowFuelState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MissionDetectedState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MonthlyReportState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MultipleTargetsState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\NewPossibleManufactureState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\NewPossibleResearchState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ProductionCompleteState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\PsiTrainingState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ResearchCompleteState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ResearchRequiredState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\SelectDestinationState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\TargetInfoState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\UfoDetectedState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\UfoLostState.cpp">
+      <Filter>Geoscape</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ArrowButton.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Bar.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\BattlescapeButton.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ComboBox.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Cursor.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\FpsCounter.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Frame.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ImageButton.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\NumberText.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ScrollBar.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Slider.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Text.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextButton.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextEdit.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextList.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ToggleTextButton.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Window.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\AbandonGameState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ConfirmLoadState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\CutsceneState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\DeleteGameState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ErrorMessageState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListGamesState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListLoadOriginalState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListLoadState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListSaveState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\LoadGameState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\MainMenuState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\NewBattleState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\NewGameState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsAdvancedState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsAudioState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsBaseState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsBattlescapeState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsConfirmState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsControlsState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsDefaultsState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsFoldersState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsGeoscapeState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ModConfirmExtendedState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ModListState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsNoAudioState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsVideoState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\PauseState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SaveGameState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SetWindowedRootState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SlideshowState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\StartState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\StatisticsState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\TestState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\VideoState.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\AlienDeployment.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\AlienRace.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Armor.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ArticleDefinition.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\City.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraSounds.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraSprites.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraStrings.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MCDPatch.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapBlock.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapData.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapDataSet.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapScript.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Mod.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Polygon.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Polyline.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleAlienMission.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleBaseFacility.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCommendations.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleConverter.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCountry.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCraft.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCraftWeapon.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleGlobe.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleInterface.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleInventory.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleItem.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleManufacture.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleMissionScript.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleMusic.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleRegion.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleResearch.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleSoldier.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleTerrain.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleUfo.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleVideo.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\SoldierNamePool.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\SoundDefinition.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\StatString.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\StatStringCondition.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Texture.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\UfoTrajectory.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Unit.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienBase.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienMission.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienStrategy.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Base.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BaseFacility.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BattleItem.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BattleUnit.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Country.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Craft.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\CraftWeapon.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\CraftWeaponProjectile.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\EquipmentLayoutItem.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\GameTime.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\ItemContainer.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\MissionSite.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\MovingTarget.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Node.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Production.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Region.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\ResearchProject.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SaveConverter.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SavedBattleGame.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SavedGame.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SerializationHelper.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Soldier.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SoldierDeath.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SoldierDiary.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Target.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Tile.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Transfer.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Ufo.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Vehicle.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Waypoint.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\WeightedOptions.cpp">
+      <Filter>Savegame</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleState.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateArmor.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateBaseFacility.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateCraft.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateCraftWeapon.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateItem.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTD.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDArmor.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDCraft.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDCraftWeapon.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDFacility.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDItem.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDUso.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDVehicle.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateText.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTextImage.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateUfo.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateVehicle.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\Ufopaedia.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\UfopaediaSelectState.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\UfopaediaStartState.cpp">
+      <Filter>Ufopedia</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\OpenXcom.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Basescape">
+      <UniqueIdentifier>{E686C2D1-7810-3268-83A3-E0BC300E7BDE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battlescape">
+      <UniqueIdentifier>{6BC8EDFD-D7BE-33DD-ADC4-A1F233C9E352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{635F4918-A9FA-3A7E-871C-5362E76BE121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geoscape">
+      <UniqueIdentifier>{2A9F242D-CA95-3280-9E9B-DB8C2D1C0419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{E8FBABDB-4F28-3572-B885-C65B3863A28F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{BC200745-20E1-36A2-A503-3C81EC85AB05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{2391B294-4E20-3DD7-B251-63F0FD2A89F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Savegame">
+      <UniqueIdentifier>{3BD4444D-8237-3E99-BE3B-F43642E28E21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D5318915-8281-3D0B-8F3E-6588DC088121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ufopedia">
+      <UniqueIdentifier>{EBD713DF-899A-304E-B878-49BB1D0EC2FF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

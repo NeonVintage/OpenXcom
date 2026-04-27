@@ -1,0 +1,10 @@
+^D:\USERS\SYN\NEXTCLOUD_SITREP\MOREPYTHON\GAMES\OPENXCOM\BUILD\CMAKEFILES\72FC104593AA497F8F47DDB6ED8C67FE\GENERATE.STAMP.RULE
+setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom -BD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/OpenXcom.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

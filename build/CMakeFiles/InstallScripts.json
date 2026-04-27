@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/cmake_install.cmake",
+		"D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/docs/cmake_install.cmake",
+		"D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

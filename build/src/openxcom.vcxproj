@@ -1,0 +1,1476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE429145-FBEF-3F73-A985-2EAA15349B15}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>openxcom</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">openxcom.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">openxcom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">openxcom.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">openxcom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">openxcom.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">openxcom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">openxcom.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">openxcom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/SDL" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/yaml-cpp" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/TFTD D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/TFTD
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/UFO D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/UFO
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/common D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/common
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/standard D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/standard
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_gfx.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_image.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_mixer.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libFLAC-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libjpeg-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmikmod-2.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmpg123-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libogg-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libpng15-15.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libtiff-5.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbis-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbisfile-3.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libwebp-7.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cpp.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cppd.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/zlib1.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;advapi32.lib;shell32.lib;shlwapi.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;SDL_gfx.lib;SDL.lib;opengl32.lib;glu32.lib;yaml-cppd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64;D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /manifest:no</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/Debug/openxcom.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/Debug/openxcom.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/SDL" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/yaml-cpp" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/TFTD D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/TFTD
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/UFO D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/UFO
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/common D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/common
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/standard D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/standard
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_gfx.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_image.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_mixer.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libFLAC-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libjpeg-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmikmod-2.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmpg123-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libogg-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libpng15-15.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libtiff-5.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbis-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbisfile-3.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libwebp-7.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cpp.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cppd.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/zlib1.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;advapi32.lib;shell32.lib;shlwapi.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;SDL_gfx.lib;SDL.lib;opengl32.lib;glu32.lib;yaml-cpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64;D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /manifest:no</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/Release/openxcom.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/Release/openxcom.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/SDL" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/yaml-cpp" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/TFTD D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/TFTD
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/UFO D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/UFO
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/common D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/common
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/standard D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/standard
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_gfx.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_image.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_mixer.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libFLAC-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libjpeg-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmikmod-2.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmpg123-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libogg-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libpng15-15.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libtiff-5.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbis-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbisfile-3.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libwebp-7.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cpp.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cppd.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/zlib1.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;advapi32.lib;shell32.lib;shlwapi.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;SDL_gfx.lib;SDL.lib;opengl32.lib;glu32.lib;yaml-cpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64;D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /manifest:no</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/MinSizeRel/openxcom.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/MinSizeRel/openxcom.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/SDL" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include/yaml-cpp" /external:I "D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;YAML_CPP_DLL;GIT_BUILD=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\SDL;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include\yaml-cpp;D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/TFTD D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/TFTD
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/UFO D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/UFO
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/common D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/common
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy_directory D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/bin/standard D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/standard
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_gfx.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_image.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/SDL_mixer.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libFLAC-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libjpeg-8.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmikmod-2.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libmpg123-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libogg-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libpng15-15.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libtiff-5.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbis-0.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libvorbisfile-3.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/libwebp-7.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cpp.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/yaml-cppd.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Programs\CMake\bin\cmake.exe -E copy D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/zlib1.dll D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;advapi32.lib;shell32.lib;shlwapi.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;SDL_gfx.lib;SDL.lib;opengl32.lib;glu32.lib;yaml-cpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64;D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/deps/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /manifest:no</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/RelWithDebInfo/openxcom.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/bin/RelWithDebInfo/openxcom.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom -BD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build --check-stamp-file D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom -BD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build --check-stamp-file D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom -BD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build --check-stamp-file D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom -BD:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build --check-stamp-file D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\lodepng.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\main.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BaseInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BaseView.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BasescapeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\BuildFacilitiesState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftArmorState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftEquipmentState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftSoldiersState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftWeaponsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\CraftsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\DismantleFacilityState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManageAlienContainmentState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureStartState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ManufactureState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\MiniBaseView.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\MonthlyCostsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\NewManufactureListState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\NewResearchListState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceFacilityState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceLiftState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PlaceStartFacilityState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\PurchaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ResearchInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\ResearchState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SackSoldierState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SelectStartFacilityState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SellState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierArmorState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryMissionState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryOverviewState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierDiaryPerformanceState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldierMemorialState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\SoldiersState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\StoresState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferBaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferConfirmState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransferItemsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Basescape\TransfersState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AbortMissionState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ActionMenuItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ActionMenuState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AliensCrashState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\AIModule.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattleState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeGame.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeGenerator.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeMessage.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BattlescapeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\BriefingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Camera.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CannotReequipState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CommendationLateState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\CommendationState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\DebriefingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Explosion.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ExplosionBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InfoboxOKState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InfoboxState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Inventory.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\InventoryState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Map.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MedikitState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MedikitView.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MeleeAttackBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MiniMapState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\MiniMapView.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\NextTurnState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Particle.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Pathfinding.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PathfindingNode.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PathfindingOpenSet.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PrimeGrenadeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\Projectile.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ProjectileFlyBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PromotionsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\PsiAttackBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ScannerState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\ScannerView.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\TileEngine.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitDieBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitFallBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitPanicBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitSprite.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitTurnBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\UnitWalkBState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Battlescape\WarningMessage.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Action.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Adlib\adlplayer.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Adlib\fmopl.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\AdlibMusic.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\CatFile.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\CrossPlatform.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FastLineClip.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FileMap.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\FlcPlayer.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Font.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\GMCat.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Game.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\InteractiveSurface.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Language.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\LanguagePlurality.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\LocalizedText.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\ModInfo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Music.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\OpenGL.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\OptionInfo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Options.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Palette.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\RNG.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq2x.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq3x.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\hq4x.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\init.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scale2x.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scale3x.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\scalebit.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Scalers\xbrz.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Screen.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Sound.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\SoundSet.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\State.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Surface.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\SurfaceSet.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Timer.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Unicode.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Zoom.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AlienBaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocatePsiTrainingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDefenseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDestroyedState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseNameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BuildNewBaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmCydoniaState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmDestinationState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmLandingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ConfirmNewBaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\CraftErrorState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\CraftPatrolState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\DogfightErrorState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\DogfightState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\FundingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GeoscapeCraftState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GeoscapeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\Globe.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\GraphsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\InterceptState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ItemsArrivingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\LowFuelState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MissionDetectedState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MonthlyReportState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\MultipleTargetsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\NewPossibleManufactureState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\NewPossibleResearchState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ProductionCompleteState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\PsiTrainingState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ResearchCompleteState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\ResearchRequiredState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\SelectDestinationState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\TargetInfoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\UfoDetectedState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\UfoLostState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ArrowButton.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Bar.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\BattlescapeButton.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ComboBox.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Cursor.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\FpsCounter.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Frame.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ImageButton.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\NumberText.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ScrollBar.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Slider.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Text.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextButton.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextEdit.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\TextList.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\ToggleTextButton.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Interface\Window.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\AbandonGameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ConfirmLoadState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\CutsceneState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\DeleteGameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ErrorMessageState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListGamesState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListLoadOriginalState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListLoadState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ListSaveState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\LoadGameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\MainMenuState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\NewBattleState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\NewGameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsAdvancedState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsAudioState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsBaseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsBattlescapeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsConfirmState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsControlsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsDefaultsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsFoldersState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsGeoscapeState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ModConfirmExtendedState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\ModListState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsNoAudioState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\OptionsVideoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\PauseState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SaveGameState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SetWindowedRootState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\SlideshowState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\StartState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\StatisticsState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\TestState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Menu\VideoState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\AlienDeployment.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\AlienRace.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Armor.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ArticleDefinition.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\City.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraSounds.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraSprites.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\ExtraStrings.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MCDPatch.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapBlock.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapData.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapDataSet.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\MapScript.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Mod.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Polygon.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Polyline.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleAlienMission.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleBaseFacility.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCommendations.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleConverter.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCountry.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCraft.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleCraftWeapon.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleGlobe.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleInterface.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleInventory.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleManufacture.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleMissionScript.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleMusic.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleRegion.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleResearch.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleSoldier.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleTerrain.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleUfo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\RuleVideo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\SoldierNamePool.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\SoundDefinition.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\StatString.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\StatStringCondition.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Texture.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\UfoTrajectory.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Mod\Unit.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienBase.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienMission.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\AlienStrategy.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Base.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BaseFacility.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BattleItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\BattleUnit.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Country.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Craft.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\CraftWeapon.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\CraftWeaponProjectile.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\EquipmentLayoutItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\GameTime.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\ItemContainer.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\MissionSite.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\MovingTarget.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Node.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Production.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Region.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\ResearchProject.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SaveConverter.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SavedBattleGame.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SavedGame.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SerializationHelper.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Soldier.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SoldierDeath.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\SoldierDiary.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Target.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Tile.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Transfer.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Ufo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Vehicle.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\Waypoint.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Savegame\WeightedOptions.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateArmor.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateBaseFacility.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateCraft.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateCraftWeapon.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTD.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDArmor.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDCraft.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDCraftWeapon.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDFacility.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDItem.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDUso.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTFTDVehicle.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateText.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateTextImage.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateUfo.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\ArticleStateVehicle.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\Ufopaedia.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\UfopaediaSelectState.cpp" />
+    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Ufopaedia\UfopaediaStartState.cpp" />
+    <ResourceCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\OpenXcom.rc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\build\ZERO_CHECK.vcxproj">
+      <Project>{A8DAA188-80FC-34E7-8AE9-2EF5895590E9}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

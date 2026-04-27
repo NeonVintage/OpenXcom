@@ -1,0 +1,9 @@
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/CMakeFiles/PACKAGE.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/CMakeFiles/INSTALL.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/CMakeFiles/ALL_BUILD.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/CMakeFiles/ZERO_CHECK.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/docs/CMakeFiles/PACKAGE.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/docs/CMakeFiles/INSTALL.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/openxcom.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/PACKAGE.dir
+D:/Users/Syn/Nextcloud_sitrep/MorePython/Games/OpenXcom/build/src/CMakeFiles/INSTALL.dir

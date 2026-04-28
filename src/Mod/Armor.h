@@ -41,7 +41,7 @@ private:
 	std::string _type, _spriteSheet, _spriteInv, _corpseGeo, _storeItem, _specWeapon;
 	std::vector<std::string> _corpseBattle;
 	int _frontArmor, _sideArmor, _rearArmor, _underArmor, _drawingRoutine;
-	bool _drawBubbles;
+	bool _drawBubbles, _nightVision, _smokeImmune;
 	MovementType _movementType;
 	int _size, _weight;
 	float _damageModifier[DAMAGE_TYPES];
@@ -86,6 +86,10 @@ public:
 	int getDrawingRoutine() const;
 	/// Gets whether or not to draw bubbles (breathing animation).
 	bool drawBubbles() const;
+	/// Gets whether this armor ignores darkness visibility limits.
+	bool hasNightVision() const;
+	/// Gets whether this armor ignores smoke visibility/stun effects.
+	bool isSmokeImmune() const;
 	/// DO NOT USE THIS FUNCTION OUTSIDE THE BATTLEUNIT CONSTRUCTOR OR I WILL HUNT YOU DOWN.
 	MovementType getMovementType() const;
 	/// Gets whether this is a normal or big unit.

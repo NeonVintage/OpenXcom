@@ -17,6 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with OpenXcom.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include <string>
 #include <vector>
 #include "../Mod/RuleTerrain.h"
 #include "../Mod/MapScript.h"
@@ -108,6 +109,12 @@ private:
 	void deployAliens(AlienDeployment *deployment);
 	/// Spawns civilians on a terror mission.
 	void deployCivilians(int max);
+	/// Equips a civilian-type unit with its built-in weapons.
+	void equipCivilian(BattleUnit *unit, Unit *rules, size_t itemLevel);
+	/// Spawns local armed neutrals for specific stock mission contexts.
+	void deployFriendlyLocals();
+	/// Spawns one local armed neutral by unit type.
+	bool deployFriendlyLocalUnit(const std::string &unitType);
 	/// Finds a spot near a friend to spawn at.
 	bool placeUnitNearFriend(BattleUnit *unit);
 	/// Load all Xcom weapons.

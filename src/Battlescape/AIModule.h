@@ -53,6 +53,13 @@ private:
 	std::vector<int> _reachable, _reachableWithAttack, _wasHitBy;
 	BattleActionType _reserve;
 	UnitFaction _targetFaction;
+	bool isPlayerAIUnit() const;
+	int countNearbyPlayerAllies(const Position &pos, int radius) const;
+	int scorePlayerCohesion(const Position &pos) const;
+	bool findPlayerEngagementAnchor(Position *anchor) const;
+	int scorePlayerEngagement(const Position &pos) const;
+	int scorePlayerCover(const Position &pos) const;
+	bool findPlayerRallyPoint();
 public:
 	/// Creates a new AIModule linked to the game and a certain unit.
 	AIModule(SavedBattleGame *save, BattleUnit *unit, Node *node);

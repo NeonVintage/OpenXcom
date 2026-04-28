@@ -265,6 +265,86 @@ items:
     damageType: 1
     clipSize: 20
     battleType: 2
+  - type: STR_M2010_SNIPER_RIFLE
+    size: 0.2
+    costBuy: 4500
+    costSell: 3375
+    weight: 9
+    bigSprite: 1
+    floorSprite: 1
+    handSprite: 0
+    bulletSprite: 2
+    fireSound: 4
+    compatibleAmmo:
+      - STR_M2010_AMMO
+    accuracySnap: 55
+    accuracyAimed: 125
+    tuSnap: 35
+    tuAimed: 80
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+  - type: STR_M2010_AMMO
+    size: 0.1
+    costBuy: 300
+    costSell: 225
+    weight: 3
+    bigSprite: 2
+    floorSprite: 2
+    hitSound: 22
+    hitAnimation: 26
+    power: 65
+    damageType: 1
+    clipSize: 5
+    battleType: 2
+  - type: STR_BENELLI_M4
+    size: 0.2
+    costBuy: 1800
+    costSell: 1350
+    weight: 6
+    bigSprite: 1
+    floorSprite: 1
+    handSprite: 0
+    bulletSprite: 2
+    fireSound: 4
+    compatibleAmmo:
+      - STR_BENELLI_M4_SLUG
+      - STR_BENELLI_M4_BUCKSHOT
+    accuracySnap: 75
+    accuracyAimed: 95
+    tuSnap: 28
+    tuAimed: 55
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+  - type: STR_BENELLI_M4_SLUG
+    size: 0.1
+    costBuy: 120
+    costSell: 90
+    weight: 2
+    bigSprite: 2
+    floorSprite: 2
+    hitSound: 22
+    hitAnimation: 26
+    power: 48
+    damageType: 1
+    clipSize: 7
+    battleType: 2
+  - type: STR_BENELLI_M4_BUCKSHOT
+    size: 0.1
+    costBuy: 90
+    costSell: 68
+    weight: 2
+    bigSprite: 2
+    floorSprite: 2
+    hitSound: 22
+    hitAnimation: 26
+    power: 36
+    damageType: 1
+    clipSize: 7
+    battleType: 2
   - type: STR_HEAVY_CANNON
     size: 0.3
     costBuy: 6400
@@ -1200,6 +1280,11 @@ items:
   - type: STR_PERSONAL_ARMOR
     size: 0.8
     costSell: 54000
+  - type: STR_NG_IHPS_MSV_GEN_II_ARMOR
+    size: 0.8
+    costBuy: 60000
+    costSell: 45000
+    transferTime: 48
   - type: STR_POWER_SUIT
     size: 0.8
     costSell: 85000

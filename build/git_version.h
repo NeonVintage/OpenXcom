@@ -20,7 +20,7 @@
 #define GIT_VERSION_H
 
 #ifndef OPENXCOM_VERSION_GIT
-#define OPENXCOM_VERSION_GIT ".1edb0a5a2-dirty"
+#define OPENXCOM_VERSION_GIT ".d2cdf74e7-dirty"
 #endif
 
 #endif

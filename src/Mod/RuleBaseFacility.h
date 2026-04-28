@@ -40,7 +40,7 @@ private:
 	int _spriteShape, _spriteFacility;
 	bool _lift, _hyper, _mind, _grav;
 	int _size, _buildCost, _buildTime, _monthlyCost;
-	int _storage, _personnel, _aliens, _crafts, _labs, _workshops, _psiLabs;
+	int _storage, _personnel, _aliens, _crafts, _labs, _workshops, _psiLabs, _training;
 	int _radarRange, _radarChance, _defense, _hitRatio, _fireSound, _hitSound;
 	std::string _mapName;
 	int _listOrder;
@@ -89,6 +89,8 @@ public:
 	int getWorkshops() const;
 	/// Gets the facility's psi-training capacity.
 	int getPsiLaboratories() const;
+	/// Gets the facility's soldier training capacity.
+	int getTraining() const;
 	/// Gets the facility's radar range.
 	int getRadarRange() const;
 	/// Gets the facility's detection chance.

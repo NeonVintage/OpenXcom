@@ -40,7 +40,7 @@ namespace OpenXcom
  * @param armor Soldier armor.
  * @param id Unique soldier id for soldier generation.
  */
-Soldier::Soldier(RuleSoldier *rules, Armor *armor, int id) : _id(id), _improvement(0), _psiStrImprovement(0), _rules(rules), _rank(RANK_ROOKIE), _craft(0), _gender(GENDER_MALE), _look(LOOK_BLONDE), _missions(0), _kills(0), _recovery(0), _recentlyPromoted(false), _psiTraining(false), _armor(armor), _death(0), _diary(new SoldierDiary())
+Soldier::Soldier(RuleSoldier *rules, Armor *armor, int id) : _id(id), _improvement(0), _psiStrImprovement(0), _rules(rules), _rank(RANK_ROOKIE), _craft(0), _gender(GENDER_MALE), _look(LOOK_BLONDE), _missions(0), _kills(0), _recovery(0), _recentlyPromoted(false), _psiTraining(false), _training(false), _armor(armor), _death(0), _diary(new SoldierDiary())
 {
 	if (id != 0)
 	{
@@ -117,6 +117,7 @@ void Soldier::load(const YAML::Node& node, const Mod *mod, SavedGame *save)
 	}
 	_armor = armor;
 	_psiTraining = node["psiTraining"].as<bool>(_psiTraining);
+	_training = node["training"].as<bool>(_training);
 	_improvement = node["improvement"].as<int>(_improvement);
 	_psiStrImprovement = node["psiStrImprovement"].as<int>(_psiStrImprovement);
 	if (const YAML::Node &layout = node["equipmentLayout"])
@@ -173,6 +174,8 @@ YAML::Node Soldier::save() const
 	node["armor"] = _armor->getType();
 	if (_psiTraining)
 		node["psiTraining"] = _psiTraining;
+	if (_training)
+		node["training"] = _training;
 	node["improvement"] = _improvement;
 	node["psiStrImprovement"] = _psiStrImprovement;
 	if (!_equipmentLayout.empty())
@@ -243,6 +246,10 @@ Craft *Soldier::getCraft() const
 void Soldier::setCraft(Craft *craft)
 {
 	_craft = craft;
+	if (_craft)
+	{
+		_training = false;
+	}
 }
 
 /**
@@ -258,6 +265,10 @@ std::string Soldier::getCraftString(Language *lang) const
 	if (_recovery > 0)
 	{
 		s = lang->getString("STR_WOUNDED");
+	}
+	else if (_training)
+	{
+		s = lang->getString("STR_TRAINING");
 	}
 	else if (_craft == 0)
 	{
@@ -564,6 +575,122 @@ void Soldier::trainPsi1Day()
 }
 
 /**
+ * Trains a soldier's combat abilities after 1 day.
+ * @return True if a stat improved.
+ */
+bool Soldier::train1Day()
+{
+	if (!_training || _recovery > 0)
+	{
+		return false;
+	}
+
+	const UnitStats caps = _rules->getStatCaps();
+	if (_currentStats.tu >= caps.tu &&
+		_currentStats.stamina >= caps.stamina &&
+		_currentStats.health >= caps.health &&
+		_currentStats.bravery >= caps.bravery &&
+		_currentStats.reactions >= caps.reactions &&
+		_currentStats.firing >= caps.firing &&
+		_currentStats.throwing >= caps.throwing &&
+		_currentStats.strength >= caps.strength &&
+		_currentStats.melee >= caps.melee)
+	{
+		return false;
+	}
+
+	if (!RNG::percent(35))
+	{
+		return false;
+	}
+
+	for (int tries = 0; tries < 12; ++tries)
+	{
+		switch (RNG::generate(0, 11))
+		{
+		case 0:
+		case 1:
+			if (_currentStats.firing < caps.firing)
+			{
+				++_currentStats.firing;
+				return true;
+			}
+			break;
+		case 2:
+		case 3:
+			if (_currentStats.reactions < caps.reactions)
+			{
+				++_currentStats.reactions;
+				return true;
+			}
+			break;
+		case 4:
+			if (_currentStats.stamina < caps.stamina)
+			{
+				++_currentStats.stamina;
+				return true;
+			}
+			break;
+		case 5:
+			if (_currentStats.strength < caps.strength)
+			{
+				++_currentStats.strength;
+				return true;
+			}
+			break;
+		case 6:
+			if (_currentStats.throwing < caps.throwing)
+			{
+				++_currentStats.throwing;
+				return true;
+			}
+			break;
+		case 7:
+			if (_currentStats.melee < caps.melee)
+			{
+				++_currentStats.melee;
+				return true;
+			}
+			break;
+		case 8:
+			if (_currentStats.bravery < caps.bravery)
+			{
+				_currentStats.bravery += 10;
+				if (_currentStats.bravery > caps.bravery)
+				{
+					_currentStats.bravery = caps.bravery;
+				}
+				return true;
+			}
+			break;
+		case 9:
+			if (_currentStats.tu < caps.tu)
+			{
+				++_currentStats.tu;
+				return true;
+			}
+			break;
+		case 10:
+			if (_currentStats.health < caps.health)
+			{
+				++_currentStats.health;
+				return true;
+			}
+			break;
+		default:
+			if (_currentStats.firing < caps.firing)
+			{
+				++_currentStats.firing;
+				return true;
+			}
+			break;
+		}
+	}
+
+	return false;
+}
+
+/**
  * returns whether or not the unit is in psi training
  * @return true/false
  */
@@ -578,6 +705,27 @@ bool Soldier::isInPsiTraining() const
 void Soldier::setPsiTraining(bool psi)
 {
 	_psiTraining = psi;
+}
+
+/**
+ * returns whether or not the unit is in general training
+ * @return true/false
+ */
+bool Soldier::isInTraining() const
+{
+	return _training;
+}
+
+/**
+ * changes whether or not the unit is in general training
+ */
+void Soldier::setTraining(bool training)
+{
+	_training = training;
+	if (_training)
+	{
+		_craft = 0;
+	}
 }
 
 /**

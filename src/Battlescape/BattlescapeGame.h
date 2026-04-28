@@ -91,6 +91,8 @@ private:
 	void showInfoBoxQueue();
 	/// Selects the next unit after an AI-controlled action.
 	void advanceAIUnit(BattleUnit *unit);
+	/// Determines if a player AI unit should kneel before acting.
+	bool shouldPlayerAIKneel(BattleUnit *unit, const BattleAction &action) const;
 public:
 	/// is debug mode enabled in the battlescape?
 	static bool _debugPlay;

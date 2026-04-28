@@ -159,6 +159,7 @@ bool BaseFacility::inUse() const
 			(_rules->getWorkshops() > 0 && _base->getAvailableWorkshops() - _rules->getWorkshops() < _base->getUsedWorkshops()) ||
 			(_rules->getCrafts() > 0 && _base->getAvailableHangars() - _rules->getCrafts() < _base->getUsedHangars()) ||
 			(_rules->getPsiLaboratories() > 0 && _base->getAvailablePsiLabs() - _rules->getPsiLaboratories() < _base->getUsedPsiLabs()) ||
+			(_rules->getTraining() > 0 && _base->getAvailableTraining() - _rules->getTraining() < _base->getUsedTraining()) ||
 			(_rules->getAliens() > 0 && _base->getAvailableContainment() - _rules->getAliens() < _base->getUsedContainment()));
 }
 

@@ -849,7 +849,7 @@ void Tile::prepareNewTurn(bool smokeDamage)
 				if (smokeDamage)
 				{
 					// try to knock this guy out.
-					if (_unit->getArmor()->getDamageModifier(DT_SMOKE) > 0.0 && _unit->getArmor()->getSize() == 1)
+					if (!_unit->getArmor()->isSmokeImmune() && _unit->getArmor()->getDamageModifier(DT_SMOKE) > 0.0 && _unit->getArmor()->getSize() == 1)
 					{
 						_unit->damage(Position(0,0,0), (_smoke / 4) + 1, DT_SMOKE, true);
 					}

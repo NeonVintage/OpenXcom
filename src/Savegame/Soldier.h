@@ -57,7 +57,7 @@ private:
 	SoldierGender _gender;
 	SoldierLook _look;
 	int _missions, _kills, _recovery;
-	bool _recentlyPromoted, _psiTraining;
+	bool _recentlyPromoted, _psiTraining, _training;
 	Armor *_armor;
 	std::vector<EquipmentLayoutItem*> _equipmentLayout;
 	SoldierDeath *_death;
@@ -128,10 +128,16 @@ public:
 	void trainPsi();
 	/// Trains a soldier's psionic abilities (anytimePsiTraining option).
 	void trainPsi1Day();
+	/// Trains a soldier's combat abilities after 1 day.
+	bool train1Day();
 	/// Returns whether the unit is in psi training or not
 	bool isInPsiTraining() const;
 	/// set the psi training status
 	void setPsiTraining(bool psi);
+	/// Returns whether the unit is in general training or not.
+	bool isInTraining() const;
+	/// Sets the general training status.
+	void setTraining(bool training);
 	/// returns this soldier's psionic skill improvement score for this month.
 	int getImprovement() const;
 	/// returns this soldier's psionic strength improvement score for this month.

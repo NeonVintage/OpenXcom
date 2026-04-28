@@ -343,6 +343,7 @@ void TransferItemsState::completeTransfer()
 					if (*s == i->rule)
 					{
 						(*s)->setPsiTraining(false);
+						(*s)->setTraining(false);
 						t = new Transfer(time);
 						t->setSoldier(*s);
 						_baseTo->getTransfers()->push_back(t);
@@ -359,6 +360,7 @@ void TransferItemsState::completeTransfer()
 					if ((*s)->getCraft() == craft)
 					{
 						(*s)->setPsiTraining(false);
+						(*s)->setTraining(false);
 						if (craft->getStatus() == "STR_OUT")
 						{
 							_baseTo->getSoldiers()->push_back(*s);

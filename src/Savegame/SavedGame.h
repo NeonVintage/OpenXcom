@@ -239,11 +239,11 @@ public:
 	/// Gets the soldier matching this ID.
 	Soldier *getSoldier(int id) const;
 	/// Handles the higher promotions.
-	bool handlePromotions(std::vector<Soldier*> &participants, bool requireParticipants = false);
+	bool handlePromotions(std::vector<Soldier*> &participants);
 	/// Processes a soldier's promotion.
 	void processSoldier(Soldier *soldier, PromotionInfo &soldierData);
 	/// Checks how many soldiers of a rank exist and which one has the highest score.
-	Soldier *inspectSoldiers(std::vector<Soldier*> &soldiers, std::vector<Soldier*> &participants, int rank, bool requireParticipants = false);
+	Soldier *inspectSoldiers(std::vector<Soldier*> &soldiers, std::vector<Soldier*> &participants, int rank);
 	///  Returns the list of alien bases.
 	std::vector<AlienBase*> *getAlienBases();
 	/// Sets debug mode.

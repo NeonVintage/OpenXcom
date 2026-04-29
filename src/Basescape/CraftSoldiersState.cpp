@@ -293,10 +293,6 @@ void CraftSoldiersState::initList()
 		{
 			color = _otherCraftColor;
 		}
-		else if ((*i)->isInTraining())
-		{
-			color = _otherCraftColor;
-		}
 		else
 		{
 			color = _lstSoldiers->getColor();
@@ -452,7 +448,7 @@ void CraftSoldiersState::lstSoldiersClick(Action *action)
 		{
 			color = _otherCraftColor;
 		}
-		else if (c->getSpaceAvailable() > 0 && s->getWoundRecovery() == 0 && !s->isInTraining())
+		else if (c->getSpaceAvailable() > 0 && s->getWoundRecovery() == 0)
 		{
 			s->setCraft(c);
 			_lstSoldiers->setCellText(row, 2, c->getName(_game->getLanguage()));

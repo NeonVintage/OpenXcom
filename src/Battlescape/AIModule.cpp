@@ -761,7 +761,7 @@ void AIModule::setupAttack()
 		}
 		return;
 	}
-	else if ((isPlayerAIUnit() && _knownEnemies) || _spottingEnemies || _unit->getAggression() < RNG::generate(0, 3))
+	else if (_spottingEnemies || _unit->getAggression() < RNG::generate(0, 3))
 	{
 		// if enemies can see us, or if we're feeling lucky, we can try to spot the enemy.
 		if (findFirePoint())
@@ -769,14 +769,6 @@ void AIModule::setupAttack()
 			if (_traceAI)
 			{
 				Log(LOG_INFO) << "Attack estimation desires to move to " << _attackAction->target;
-			}
-			return;
-		}
-		if (isPlayerAIUnit() && findPlayerRallyPoint())
-		{
-			if (_traceAI)
-			{
-				Log(LOG_INFO) << "Attack estimation desires to rally to " << _attackAction->target;
 			}
 			return;
 		}
@@ -1048,142 +1040,6 @@ int AIModule::getSpottingUnits(const Position& pos) const
 }
 
 /**
- * Checks whether this unit should use the X-COM tactical AI heuristics.
- * @return True if this AI controls a player unit.
- */
-bool AIModule::isPlayerAIUnit() const
-{
-	return _unit->getFaction() == FACTION_PLAYER;
-}
-
-/**
- * Counts nearby X-COM allies around a candidate position.
- * @param pos Position to score.
- * @param radius Tile radius.
- * @return Number of nearby allies.
- */
-int AIModule::countNearbyPlayerAllies(const Position &pos, int radius) const
-{
-	int allies = 0;
-	for (std::vector<BattleUnit*>::const_iterator i = _save->getUnits()->begin(); i != _save->getUnits()->end(); ++i)
-	{
-		if (*i != _unit && !(*i)->isOut() && (*i)->getFaction() == FACTION_PLAYER &&
-			_save->getTileEngine()->distance(pos, (*i)->getPosition()) <= radius)
-		{
-			++allies;
-		}
-	}
-	return allies;
-}
-
-/**
- * Scores how well a candidate position keeps X-COM soldiers in small teams.
- * @param pos Position to score.
- * @return Cohesion score.
- */
-int AIModule::scorePlayerCohesion(const Position &pos) const
-{
-	const int closeAllies = countNearbyPlayerAllies(pos, 6);
-	if (closeAllies == 0)
-	{
-		return -25;
-	}
-	if (closeAllies == 1)
-	{
-		return 15;
-	}
-	if (closeAllies == 2)
-	{
-		return 30;
-	}
-	if (closeAllies <= 4)
-	{
-		return 10;
-	}
-	return -5;
-}
-
-/**
- * Finds a nearby X-COM soldier currently engaging aliens.
- * @param anchor The selected ally position.
- * @return True if an anchor was found.
- */
-bool AIModule::findPlayerEngagementAnchor(Position *anchor) const
-{
-	int bestDist = INT_MAX;
-	bool found = false;
-	for (std::vector<BattleUnit*>::const_iterator i = _save->getUnits()->begin(); i != _save->getUnits()->end(); ++i)
-	{
-		if (*i == _unit || (*i)->isOut() || (*i)->getFaction() != FACTION_PLAYER || (*i)->getVisibleUnits()->empty())
-		{
-			continue;
-		}
-		int dist = _save->getTileEngine()->distance(_unit->getPosition(), (*i)->getPosition());
-		if (dist < bestDist)
-		{
-			bestDist = dist;
-			*anchor = (*i)->getPosition();
-			found = true;
-		}
-	}
-	return found;
-}
-
-/**
- * Scores movement toward X-COM soldiers already in contact.
- * @param pos Position to score.
- * @return Engagement score.
- */
-int AIModule::scorePlayerEngagement(const Position &pos) const
-{
-	Position anchor;
-	if (!findPlayerEngagementAnchor(&anchor))
-	{
-		return 0;
-	}
-
-	const int currentDist = _save->getTileEngine()->distance(_unit->getPosition(), anchor);
-	const int newDist = _save->getTileEngine()->distance(pos, anchor);
-	int score = (currentDist - newDist) * 5;
-	if (newDist >= 3 && newDist <= 8)
-	{
-		score += 15;
-	}
-	else if (newDist < 2)
-	{
-		score -= 10;
-	}
-	return score;
-}
-
-/**
- * Scores a candidate position for X-COM cover and survivability.
- * @param pos Position to score.
- * @return Cover score.
- */
-int AIModule::scorePlayerCover(const Position &pos) const
-{
-	int score = -getSpottingUnits(pos) * 15;
-	if (_aggroTarget && !_aggroTarget->checkViewSector(pos))
-	{
-		score += 10;
-	}
-	if (_aggroTarget)
-	{
-		const int dist = _save->getTileEngine()->distance(pos, _aggroTarget->getPosition());
-		if (dist >= 6 && dist <= 18)
-		{
-			score += 10;
-		}
-		else if (dist < 4)
-		{
-			score -= 15;
-		}
-	}
-	return score;
-}
-
-/**
  * Selects the nearest known living target we can see/reach and returns the number of visible enemies.
  * This function includes civilians as viable targets.
  * @return viable targets.
@@ -1401,16 +1257,6 @@ void AIModule::evaluateAIMode()
 		escapeOdds = 0;
 	}
 
-	if (isPlayerAIUnit() && (_knownEnemies || _visibleEnemies))
-	{
-		patrolOdds = 0;
-		combatOdds *= 2;
-		if (_spottingEnemies == 0)
-		{
-			escapeOdds /= 2;
-		}
-	}
-
 	// take our current mode into consideration
 	switch (_AIMode)
 	{
@@ -1565,10 +1411,6 @@ void AIModule::evaluateAIMode()
 		{
 			return;
 		}
-		else if (isPlayerAIUnit() && findPlayerRallyPoint())
-		{
-			return;
-		}
 		_AIMode = AI_PATROL;
 	}
 
@@ -1637,16 +1479,6 @@ bool AIModule::findFirePoint()
 				{
 					score += 10;
 				}
-				if (isPlayerAIUnit())
-				{
-					score += scorePlayerCover(pos);
-					score += scorePlayerCohesion(pos);
-					score += scorePlayerEngagement(pos);
-					if (_attackAction->weapon && _unit->getTimeUnits() - _save->getPathfinding()->getTotalTUCost() >= _unit->getActionTUs(BA_SNAPSHOT, _attackAction->weapon))
-					{
-						score += 12;
-					}
-				}
 				if (score > bestScore)
 				{
 					bestScore = score;
@@ -1675,68 +1507,6 @@ bool AIModule::findFirePoint()
 		Log(LOG_INFO) << "Firepoint failed, best estimation was: " << _attackAction->target << ", with a score of: " << bestScore;
 	}
 
-	return false;
-}
-
-/**
- * Finds a support position near X-COM soldiers who are engaging aliens.
- * @return True if a rally position was found.
- */
-bool AIModule::findPlayerRallyPoint()
-{
-	Position anchor;
-	if (!findPlayerEngagementAnchor(&anchor))
-	{
-		return false;
-	}
-
-	std::vector<Position> randomTileSearch = _save->getTileSearch();
-	RNG::shuffle(randomTileSearch);
-	int bestScore = 0;
-	_attackAction->type = BA_RETHINK;
-	for (std::vector<Position>::const_iterator i = randomTileSearch.begin(); i != randomTileSearch.end(); ++i)
-	{
-		Position pos = _unit->getPosition() + *i;
-		Tile *tile = _save->getTile(pos);
-		if (tile == 0 ||
-			std::find(_reachable.begin(), _reachable.end(), _save->getTileIndex(pos)) == _reachable.end())
-		{
-			continue;
-		}
-
-		_save->getPathfinding()->calculate(_unit, pos);
-		if (_save->getPathfinding()->getStartDirection() == -1)
-		{
-			continue;
-		}
-
-		int score = 50;
-		score += scorePlayerEngagement(pos);
-		score += scorePlayerCohesion(pos);
-		score += scorePlayerCover(pos);
-		score += _unit->getTimeUnits() - _save->getPathfinding()->getTotalTUCost();
-		if (_save->getTileEngine()->distance(pos, anchor) > _save->getTileEngine()->distance(_unit->getPosition(), anchor))
-		{
-			score -= 30;
-		}
-
-		if (score > bestScore)
-		{
-			bestScore = score;
-			_attackAction->target = pos;
-			_attackAction->finalFacing = _save->getTileEngine()->getDirectionTo(pos, anchor);
-		}
-	}
-
-	if (bestScore > 55)
-	{
-		_attackAction->type = BA_WALK;
-		if (_traceAI)
-		{
-			Log(LOG_INFO) << "Player rally point found at " << _attackAction->target << ", with a score of: " << bestScore;
-		}
-		return true;
-	}
 	return false;
 }
 
@@ -2364,8 +2134,7 @@ bool AIModule::getNodeOfBestEfficacy(BattleAction *action)
 					if (_save->getTileEngine()->canTargetTile(&targetOriginVoxel, _save->getTile((*i)->getPosition()), O_FLOOR, &targetVoxel, *j, false))
 					{
 						if ((_unit->getFaction() == FACTION_HOSTILE && (*j)->getFaction() != FACTION_HOSTILE) ||
-							(_unit->getFaction() == FACTION_NEUTRAL && (*j)->getFaction() == FACTION_HOSTILE) ||
-							(_unit->getFaction() == FACTION_PLAYER && (*j)->getFaction() == FACTION_HOSTILE))
+							(_unit->getFaction() == FACTION_NEUTRAL && (*j)->getFaction() == FACTION_HOSTILE))
 						{
 							if ((*j)->getTurnsSinceSpotted() <= _intelligence)
 							{

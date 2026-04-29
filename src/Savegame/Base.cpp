@@ -883,15 +883,6 @@ int Base::getFreePsiLabs() const
 }
 
 /**
- * Return training space not in use
- * @return training space not in use
- */
-int Base::getFreeTraining() const
-{
-	return getAvailableTraining() - getUsedTraining();
-}
-
-/**
  * Return containment space not in use
  * @return containment space not in use
  */
@@ -1220,42 +1211,6 @@ int Base::getUsedPsiLabs() const
 	for (std::vector<Soldier*>::const_iterator s = _soldiers.begin(); s != _soldiers.end(); ++s)
 	{
 		if ((*s)->isInPsiTraining())
-		{
-			total ++;
-		}
-	}
-	return total;
-}
-
-/**
- * Returns the total amount of Training Space
- * available in the base.
- * @return Training space.
- */
-int Base::getAvailableTraining() const
-{
-	int total = 0;
-	for (std::vector<BaseFacility*>::const_iterator i = _facilities.begin(); i != _facilities.end(); ++i)
-	{
-		if ((*i)->getBuildTime() == 0)
-		{
-			total += (*i)->getRules()->getTraining();
-		}
-	}
-	return total;
-}
-
-/**
- * Returns the total amount of used
- * Training Space in the base.
- * @return used Training space.
- */
-int Base::getUsedTraining() const
-{
-	int total = 0;
-	for (std::vector<Soldier*>::const_iterator s = _soldiers.begin(); s != _soldiers.end(); ++s)
-	{
-		if ((*s)->isInTraining())
 		{
 			total ++;
 		}
@@ -1715,19 +1670,6 @@ void Base::destroyFacility(std::vector<BaseFacility*>::iterator facility)
 			if ((*i)->isInPsiTraining())
 			{
 				(*i)->setPsiTraining(false);
-				--toRemove;
-			}
-		}
-	}
-	if ((*facility)->getRules()->getTraining() > 0)
-	{
-		// training facility destruction: remove soldiers over the maximum allowable from training.
-		int toRemove = (*facility)->getRules()->getTraining() - getFreeTraining();
-		for (std::vector<Soldier*>::iterator i = _soldiers.begin(); i != _soldiers.end() && toRemove > 0; ++i)
-		{
-			if ((*i)->isInTraining())
-			{
-				(*i)->setTraining(false);
 				--toRemove;
 			}
 		}

@@ -145,14 +145,6 @@ facilities:
     monthlyCost: 16000
     psiLabs: 10
     mapName: XBASE_14
-  - type: STR_TRAINING_FACILITIES
-    spriteShape: 1
-    spriteFacility: 31
-    buildCost: 500000
-    buildTime: 20
-    monthlyCost: 12000
-    training: 10
-    mapName: XBASE_14
   - type: STR_HYPER_WAVE_DECODER
     requires:
       - STR_HYPER_WAVE_DECODER

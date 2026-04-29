@@ -1679,14 +1679,6 @@ void GeoscapeState::time1Day()
 			{
 				(*j)->heal();
 			}
-			if ((*i)->getAvailableTraining() > 0 && (*j)->train1Day())
-			{
-				if ((*j)->getRank() == RANK_ROOKIE)
-				{
-					(*j)->promoteRank();
-				}
-				(*j)->calcStatString(_game->getMod()->getStatStrings(), (Options::psiStrengthEval && _game->getSavedGame()->isResearched(_game->getMod()->getPsiRequirements())));
-			}
 		}
 		// Handle psionic training
 		if ((*i)->getAvailablePsiLabs() > 0 && Options::anytimePsiTraining)
@@ -1768,25 +1760,6 @@ void GeoscapeState::time1Month()
 				}
 			}
 		}
-	}
-
-	std::vector<Soldier*> trainingParticipants;
-	for (std::vector<Base*>::const_iterator b = _game->getSavedGame()->getBases()->begin(); b != _game->getSavedGame()->getBases()->end(); ++b)
-	{
-		if ((*b)->getAvailableTraining() > 0)
-		{
-			for (std::vector<Soldier*>::const_iterator s = (*b)->getSoldiers()->begin(); s != (*b)->getSoldiers()->end(); ++s)
-			{
-				if ((*s)->isInTraining())
-				{
-					trainingParticipants.push_back(*s);
-				}
-			}
-		}
-	}
-	if (!trainingParticipants.empty())
-	{
-		_game->getSavedGame()->handlePromotions(trainingParticipants, true);
 	}
 
 	// Handle funding

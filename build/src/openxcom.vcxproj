@@ -1277,7 +1277,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Engine\Zoom.cpp" />
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AlienBaseState.cpp" />
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocatePsiTrainingState.cpp" />
-    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocateTrainingState.cpp" />
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDefenseState.cpp" />
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDestroyedState.cpp" />
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseNameState.cpp" />

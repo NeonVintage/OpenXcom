@@ -398,12 +398,8 @@ bool TileEngine::visible(BattleUnit *currentUnit, Tile *tile)
 		return false;
 	}
 
-	const bool hasNightVision = currentUnit->getArmor()->hasNightVision();
-	const bool isSmokeImmune = currentUnit->getArmor()->isSmokeImmune();
-
 	// aliens can see in the dark, xcom can see at a distance of 9 or less, further if there's enough light.
 	if ((currentUnit->getFaction() == FACTION_PLAYER &&
-		!hasNightVision &&
 		distance(currentUnit->getPosition(), tile->getPosition()) > 9 &&
 		tile->getShade() > MAX_DARKNESS_TO_SEE_UNITS) ||
 		distance(currentUnit->getPosition(), tile->getPosition()) > MAX_VIEW_DISTANCE)
@@ -439,7 +435,7 @@ bool TileEngine::visible(BattleUnit *currentUnit, Tile *tile)
 			{
 				t = _save->getTile(Position(_trajectory.at(i).x/16,_trajectory.at(i).y/16, _trajectory.at(i).z/24));
 			}
-			if (t->getFire() == 0 && !isSmokeImmune)
+			if (t->getFire() == 0)
 			{
 				visibleDistance += t->getSmoke() / 3;
 			}

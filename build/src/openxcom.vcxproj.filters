@@ -400,9 +400,6 @@
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocatePsiTrainingState.cpp">
       <Filter>Geoscape</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\AllocateTrainingState.cpp">
-      <Filter>Geoscape</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Users\Syn\Nextcloud_sitrep\MorePython\Games\OpenXcom\src\Geoscape\BaseDefenseState.cpp">
       <Filter>Geoscape</Filter>
     </ClCompile>

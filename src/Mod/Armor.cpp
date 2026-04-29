@@ -30,7 +30,7 @@ const std::string Armor::NONE = "STR_NONE";
  */
 Armor::Armor(const std::string &type) :
 	_type(type), _frontArmor(0), _sideArmor(0), _rearArmor(0), _underArmor(0),
-	_drawingRoutine(0), _drawBubbles(false), _nightVision(false), _smokeImmune(false), _movementType(MT_WALK), _size(1), _weight(0),
+	_drawingRoutine(0), _drawBubbles(false), _movementType(MT_WALK), _size(1), _weight(0),
 	_deathFrames(3), _constantAnimation(false), _hasInventory(true),
 	_forcedTorso(TORSO_USE_GENDER),
 	_faceColorGroup(0), _hairColorGroup(0), _utileColorGroup(0), _rankColorGroup(0)
@@ -77,8 +77,6 @@ void Armor::load(const YAML::Node &node)
 	_underArmor = node["underArmor"].as<int>(_underArmor);
 	_drawingRoutine = node["drawingRoutine"].as<int>(_drawingRoutine);
 	_drawBubbles = node["drawBubbles"].as<bool>(_drawBubbles);
-	_nightVision = node["nightVision"].as<bool>(_nightVision);
-	_smokeImmune = node["smokeImmune"].as<bool>(_smokeImmune);
 	_movementType = (MovementType)node["movementType"].as<int>(_movementType);
 	_size = node["size"].as<int>(_size);
 	_weight = node["weight"].as<int>(_weight);
@@ -230,24 +228,6 @@ int Armor::getDrawingRoutine() const
 bool Armor::drawBubbles() const
 {
 	return _drawBubbles;
-}
-
-/**
- * Gets whether this armor ignores darkness visibility limits.
- * @return True if night vision is enabled.
- */
-bool Armor::hasNightVision() const
-{
-	return _nightVision;
-}
-
-/**
- * Gets whether this armor ignores smoke visibility/stun effects.
- * @return True if smoke immunity is enabled.
- */
-bool Armor::isSmokeImmune() const
-{
-	return _smokeImmune;
 }
 
 /**

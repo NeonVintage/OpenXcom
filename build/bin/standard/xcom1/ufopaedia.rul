@@ -155,10 +155,6 @@ ufopaedia:
     requires:
       - STR_PERSONAL_ARMOR
     text: STR_PERSONAL_ARMOR_UFOPEDIA
-  - id: STR_NG_IHPS_MSV_GEN_II_ARMOR_UC
-    type_id: 5
-    section: STR_WEAPONS_AND_EQUIPMENT
-    text: STR_NG_IHPS_MSV_GEN_II_ARMOR_UFOPEDIA
   - id: STR_POWER_SUIT_UC
     type_id: 5
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -183,23 +179,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_RIFLE_UFOPEDIA
   - id: STR_RIFLE_CLIP
-    type_id: 4
-    section: STR_NOT_AVAILABLE
-  - id: STR_M2010_SNIPER_RIFLE
-    type_id: 4
-    section: STR_WEAPONS_AND_EQUIPMENT
-    text: STR_M2010_SNIPER_RIFLE_UFOPEDIA
-  - id: STR_M2010_AMMO
-    type_id: 4
-    section: STR_NOT_AVAILABLE
-  - id: STR_BENELLI_M4
-    type_id: 4
-    section: STR_WEAPONS_AND_EQUIPMENT
-    text: STR_BENELLI_M4_UFOPEDIA
-  - id: STR_BENELLI_M4_SLUG
-    type_id: 4
-    section: STR_NOT_AVAILABLE
-  - id: STR_BENELLI_M4_BUCKSHOT
     type_id: 4
     section: STR_NOT_AVAILABLE
   - id: STR_HEAVY_CANNON

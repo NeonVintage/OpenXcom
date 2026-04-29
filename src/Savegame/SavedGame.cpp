@@ -1507,7 +1507,7 @@ Soldier *SavedGame::getSoldier(int id) const
  * @param participants a list of soldiers that were actually present at the battle.
  * @return Whether or not some promotions happened - to show the promotions screen.
  */
-bool SavedGame::handlePromotions(std::vector<Soldier*> &participants, bool requireParticipants)
+bool SavedGame::handlePromotions(std::vector<Soldier*> &participants)
 {
 	int soldiersPromoted = 0;
 	Soldier *highestRanked = 0;
@@ -1536,7 +1536,7 @@ bool SavedGame::handlePromotions(std::vector<Soldier*> &participants, bool requi
 	{
 		if (totalSoldiers >= 30)
 		{
-			highestRanked = inspectSoldiers(soldiers, participants, RANK_COLONEL, requireParticipants);
+			highestRanked = inspectSoldiers(soldiers, participants, RANK_COLONEL);
 			if (highestRanked)
 			{
 				// only promote one colonel to commander
@@ -1552,7 +1552,7 @@ bool SavedGame::handlePromotions(std::vector<Soldier*> &participants, bool requi
 	{
 		while ((totalSoldiers / 23) > soldierData.totalColonels)
 		{
-			highestRanked = inspectSoldiers(soldiers, participants, RANK_CAPTAIN, requireParticipants);
+			highestRanked = inspectSoldiers(soldiers, participants, RANK_CAPTAIN);
 			if (highestRanked)
 			{
 				highestRanked->promoteRank();
@@ -1571,7 +1571,7 @@ bool SavedGame::handlePromotions(std::vector<Soldier*> &participants, bool requi
 	{
 		while ((totalSoldiers / 11) > soldierData.totalCaptains)
 		{
-			highestRanked = inspectSoldiers(soldiers, participants, RANK_SERGEANT, requireParticipants);
+			highestRanked = inspectSoldiers(soldiers, participants, RANK_SERGEANT);
 			if (highestRanked)
 			{
 				highestRanked->promoteRank();
@@ -1590,7 +1590,7 @@ bool SavedGame::handlePromotions(std::vector<Soldier*> &participants, bool requi
 	{
 		while ((totalSoldiers / 5) > soldierData.totalSergeants)
 		{
-			highestRanked = inspectSoldiers(soldiers, participants, RANK_SQUADDIE, requireParticipants);
+			highestRanked = inspectSoldiers(soldiers, participants, RANK_SQUADDIE);
 			if (highestRanked)
 			{
 				highestRanked->promoteRank();
@@ -1640,7 +1640,7 @@ void SavedGame::processSoldier(Soldier *soldier, PromotionInfo &soldierData)
  * @param rank Rank to inspect.
  * @return the highest ranked soldier
  */
-Soldier *SavedGame::inspectSoldiers(std::vector<Soldier*> &soldiers, std::vector<Soldier*> &participants, int rank, bool requireParticipants)
+Soldier *SavedGame::inspectSoldiers(std::vector<Soldier*> &soldiers, std::vector<Soldier*> &participants, int rank)
 {
 	int highestScore = 0;
 	Soldier *highestRanked = 0;
@@ -1649,7 +1649,7 @@ Soldier *SavedGame::inspectSoldiers(std::vector<Soldier*> &soldiers, std::vector
 		if ((*i)->getRank() == rank)
 		{
 			int score = getSoldierScore(*i);
-			if (score > highestScore && ((!Options::fieldPromotions && !requireParticipants) || std::find(participants.begin(), participants.end(), *i) != participants.end()))
+			if (score > highestScore && (!Options::fieldPromotions || std::find(participants.begin(), participants.end(), *i) != participants.end()))
 			{
 				highestScore = score;
 				highestRanked = (*i);

@@ -264,11 +264,6 @@ void BattlescapeGame::handleAI(BattleUnit *unit)
 		unit->think(&action);
 	}
 
-	if (shouldPlayerAIKneel(unit, action))
-	{
-		kneel(unit);
-	}
-
 	_AIActionCounter = action.number;
 	BattleItem *weapon = unit->getMainHandWeapon();
 	if (!weapon || !weapon->getAmmoItem())
@@ -391,41 +386,6 @@ bool BattlescapeGame::kneel(BattleUnit *bu)
 		}
 	}
 	return false;
-}
-
-/**
- * Determines if a player AI unit should kneel before acting.
- * @param unit Pointer to a unit.
- * @param action Planned AI action.
- * @return True if kneeling is useful and affordable.
- */
-bool BattlescapeGame::shouldPlayerAIKneel(BattleUnit *unit, const BattleAction &action) const
-{
-	if (!_playerAIEnabled || _save->getSide() != FACTION_PLAYER || unit->getFaction() != FACTION_PLAYER ||
-		unit->isKneeled() || unit->isFloating() || unit->getType() != "SOLDIER" || unit->getCharging())
-	{
-		return false;
-	}
-
-	if (action.type == BA_WALK || action.type == BA_THROW || action.type == BA_HIT ||
-		action.type == BA_LAUNCH || action.type == BA_MINDCONTROL || action.type == BA_PANIC)
-	{
-		return false;
-	}
-
-	BattleItem *weapon = action.weapon ? action.weapon : unit->getMainHandWeapon();
-	if (!weapon || !weapon->getAmmoItem() || weapon->getRules()->getBattleType() != BT_FIREARM)
-	{
-		return false;
-	}
-
-	const int kneelTUs = 4;
-	if (action.type == BA_SNAPSHOT || action.type == BA_AUTOSHOT || action.type == BA_AIMEDSHOT)
-	{
-		return unit->getTimeUnits() >= kneelTUs + unit->getActionTUs(action.type, weapon);
-	}
-
-	return !unit->getVisibleUnits()->empty() && unit->getTimeUnits() >= kneelTUs + unit->getActionTUs(BA_SNAPSHOT, weapon);
 }
 
 /**

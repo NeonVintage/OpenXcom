@@ -617,7 +617,6 @@ void BattlescapeGenerator::run()
 	}
 
 	deployCivilians(ruleDeploy->getCivilians());
-	deployFriendlyLocals();
 
 	if (_generateFuel)
 	{
@@ -1866,104 +1865,35 @@ void BattlescapeGenerator::deployCivilians(int max)
 				if (civ)
 				{
 					size_t itemLevel = (size_t)(_game->getMod()->getAlienItemLevels().at(month).at(RNG::generate(0,9)));
-					equipCivilian(civ, rule, itemLevel);
+					// Built in weapons: civilians may have levelled item lists with randomized distributions
+					// following the same basic rules as the alien item levels.
+					if (!rule->getBuiltInWeapons().empty())
+					{
+						if (itemLevel >= rule->getBuiltInWeapons().size())
+						{
+							itemLevel = rule->getBuiltInWeapons().size() -1;
+						}
+						for (std::vector<std::string>::const_iterator j = rule->getBuiltInWeapons().at(itemLevel).begin(); j != rule->getBuiltInWeapons().at(itemLevel).end(); ++j)
+						{
+							RuleItem *ruleItem = _game->getMod()->getItem(*j);
+							if (ruleItem)
+							{
+								BattleItem *item = new BattleItem(ruleItem, _save->getCurrentItemId());
+								if (!addItem(item, civ))
+								{
+									delete item;
+								}
+								else if (ruleItem->getTurretType() != -1)
+								{
+									civ->setTurretType(ruleItem->getTurretType());
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	}
-}
-
-/**
- * Equips a civilian-type unit with its built-in weapons.
- * @param unit Pointer to the civilian-type unit.
- * @param rules Pointer to the Unit which holds loadout info.
- * @param itemLevel Item level to use for levelled built-in weapon sets.
- */
-void BattlescapeGenerator::equipCivilian(BattleUnit *unit, Unit *rules, size_t itemLevel)
-{
-	// Built in weapons: civilians may have levelled item lists with randomized distributions
-	// following the same basic rules as the alien item levels.
-	if (!unit || rules->getBuiltInWeapons().empty())
-	{
-		return;
-	}
-	if (itemLevel >= rules->getBuiltInWeapons().size())
-	{
-		itemLevel = rules->getBuiltInWeapons().size() -1;
-	}
-	for (std::vector<std::string>::const_iterator i = rules->getBuiltInWeapons().at(itemLevel).begin(); i != rules->getBuiltInWeapons().at(itemLevel).end(); ++i)
-	{
-		RuleItem *ruleItem = _game->getMod()->getItem(*i);
-		if (ruleItem)
-		{
-			BattleItem *item = new BattleItem(ruleItem, _save->getCurrentItemId());
-			if (!addItem(item, unit))
-			{
-				delete item;
-			}
-			else if (ruleItem->getTurretType() != -1)
-			{
-				unit->setTurretType(ruleItem->getTurretType());
-			}
-		}
-	}
-}
-
-/**
- * Spawns stock local armed neutrals for terror and farm missions.
- */
-void BattlescapeGenerator::deployFriendlyLocals()
-{
-	const std::string missionType = _save->getMissionType();
-
-	if (missionType == "STR_TERROR_MISSION")
-	{
-		const int defenders = RNG::generate(2, 3);
-		for (int i = 0; i < defenders; ++i)
-		{
-			deployFriendlyLocalUnit(RNG::percent(50) ? "STR_LOCAL_POLICE" : "STR_LOCAL_MILITARY");
-		}
-
-		const int armedCivilians = RNG::generate(1, 2);
-		for (int i = 0; i < armedCivilians; ++i)
-		{
-			deployFriendlyLocalUnit(RNG::percent(50) ? "STR_ARMED_CIVILIAN_MALE" : "STR_ARMED_CIVILIAN_FEMALE");
-		}
-		return;
-	}
-
-	if ((missionType == "STR_UFO_CRASH_RECOVERY" || missionType == "STR_UFO_GROUND_ASSAULT")
-		&& _terrain && (_terrain->getName() == "CULTA" || _terrain->getScript() == "FARM"))
-	{
-		const int farmers = RNG::generate(1, 3);
-		for (int i = 0; i < farmers; ++i)
-		{
-			deployFriendlyLocalUnit(RNG::percent(50) ? "STR_ARMED_FARMER_MALE" : "STR_ARMED_FARMER_FEMALE");
-		}
-	}
-}
-
-/**
- * Spawns one stock local armed neutral.
- * @param unitType Unit type to spawn.
- * @return If the unit was successfully placed.
- */
-bool BattlescapeGenerator::deployFriendlyLocalUnit(const std::string &unitType)
-{
-	Unit *rules = _game->getMod()->getUnit(unitType);
-	if (!rules)
-	{
-		return false;
-	}
-
-	BattleUnit *unit = addCivilian(rules);
-	if (!unit)
-	{
-		return false;
-	}
-
-	equipCivilian(unit, rules, 0);
-	return true;
 }
 
 /**
